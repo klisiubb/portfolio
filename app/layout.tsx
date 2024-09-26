@@ -15,9 +15,18 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mateusz Kliś",
+  title: "Mateusz Kliś | Portfolio",
   description:
     "Mateusz Kliś - CS student at University of Bielsko-Biała. Fullstack Next.js developer.",
+  openGraph: {
+    title: "Mateusz Kliś | Portfolio",
+    description:
+      "Mateusz Kliś - CS student at University of Bielsko-Biała. Fullstack Next.js developer.",
+    type: "website",
+    locale: "en-GB",
+    url: process.env.WEBSITE_URL,
+    siteName: "Mateusz Kliś | Portfolio",
+  },
 };
 
 export default function RootLayout({
