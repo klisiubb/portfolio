@@ -4,6 +4,8 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { navItems, sentences } from "@/misc";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import Navbar from "@/components/navbar";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import { links } from "@/misc/links";
 
 export default function Page() {
   return (
@@ -23,9 +25,10 @@ export default function Page() {
         text="Hi, I am Mateusz Kliś."
         duration={50}
       />
-      <div className="text-xs md:text-xl my-4 font-semibold">
+      <div className="text-xs md:text-xl my-14 font-semibold">
         <FlipWords words={sentences} duration={4000} />
       </div>
+      <FloatingDock items={links} />
     </div>
   );
 }
