@@ -8,12 +8,13 @@ interface NavItem {
   name: string;
   link: string;
 }
+
 export default function Navbar({ navItems }: { navItems: NavItem[] }) {
   const [activeItem, setActiveItem] = React.useState<string | null>(null);
 
   return (
     <nav className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
-      <ul className="flex items-center justify-center space-x-2 px-4 py-2 backdrop-blur-md bg-white/50 dark:bg-gray-800/50 rounded-full shadow-lg dark:shadow-2xl">
+      <ul className="flex items-center justify-center space-x-2 px-4 py-2 backdrop-blur-md bg-gray-50 dark:bg-neutral-900 rounded-full shadow-lg dark:shadow-2xl">
         {navItems.map((item) => (
           <motion.li
             key={item.name}
