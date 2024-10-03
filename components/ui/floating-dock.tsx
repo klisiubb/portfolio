@@ -49,19 +49,19 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2"
+            className="absolute top-full mt-2 inset-x-0 flex flex-col gap-2"
           >
             {items.map((item, idx) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: -10 }}
                 animate={{
                   opacity: 1,
                   y: 0,
                 }}
                 exit={{
                   opacity: 0,
-                  y: 10,
+                  y: -10,
                   transition: {
                     delay: idx * 0.05,
                   },
@@ -113,7 +113,6 @@ const FloatingDockDesktop = ({
     </motion.div>
   );
 };
-
 function IconContainer({
   mouseX,
   title,
@@ -178,7 +177,12 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
+        className={cn(
+          "aspect-square rounded-full flex items-center justify-center relative",
+          hovered
+            ? "bg-blue-500 dark:bg-blue-700"
+            : "bg-gray-200 dark:bg-neutral-800"
+        )}
       >
         <AnimatePresence>
           {hovered && (
@@ -192,9 +196,13 @@ function IconContainer({
             </motion.div>
           )}
         </AnimatePresence>
+
         <motion.div
           style={{ width: widthIcon, height: heightIcon }}
-          className="flex items-center justify-center"
+          className={cn(
+            "flex items-center justify-center",
+            hovered ? "text-white" : "text-gray-300 dark:text-gray-300"
+          )}
         >
           {icon}
         </motion.div>

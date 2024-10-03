@@ -23,13 +23,13 @@ export default function Navbar({ navItems }: { navItems: NavItem[] }) {
           >
             <a
               href={item.link}
-              className="px-4 py-2 rounded-full text-base font-medium transition-colors duration-200 hover:font-bold"
+              className="px-4 py-2 rounded-full text-base font-medium transition-colors duration-200 hover:font-bold hover:text-white"
             >
               {item.name}
             </a>
             {activeItem === item.name && (
               <motion.div
-                className="absolute inset-0 bg-blue-500 rounded-full -z-10"
+                className="absolute inset-0 bg-blue-500 dark:bg-blue-700 rounded-full -z-10"
                 layoutId="navbar-active-item"
                 transition={{ type: "spring", stiffness: 380, damping: 30 }}
               />
