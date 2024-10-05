@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en-GB",
     images: {
-      url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/opengraph-image.png`,
+      url: `${process.env.WEBSITE_URL}/opengraph-image.png`,
     },
-    url: process.env.NEXT_PUBLIC_WEBSITE_URL,
+    url: process.env.WEBSITE_URL,
     siteName: "Mateusz Kliś | Portfolio",
   },
 };
