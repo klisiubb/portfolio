@@ -25,6 +25,11 @@ export const metadata: Metadata = {
       "Mateusz Kliś - CS student at University of Bielsko-Biała. Fullstack Next.js developer.",
     type: "website",
     locale: "en-GB",
+    images: [
+      {
+        url: `https://klisiu.me/opengraph-image.png`,
+      },
+    ],
     url: process.env.NEXT_PUBLIC_WEBSITE_URL,
     siteName: "Mateusz Kliś | Portfolio",
   },
