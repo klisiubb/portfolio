@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en-GB",
     images: {
-      url: `${process.env.WEBSITE_URL}/opengraph-image.png`,
+      url: `./opengraph-image.png`,
     },
     url: process.env.WEBSITE_URL,
     siteName: "Mateusz Kliś | Portfolio",
