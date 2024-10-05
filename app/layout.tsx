@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     locale: "en-GB",
     images: [
       {
-        url: `${process.env.WEBSITE_URL}/opengraph-image.png`,
+        url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/opengraph-image.png`,
       },
     ],
-    url: process.env.WEBSITE_URL,
+    url: process.env.NEXT_PUBLIC_WEBSITE_URL,
     siteName: "Mateusz Kliś | Portfolio",
   },
 };
