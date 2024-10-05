@@ -15,6 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL as string),
   title: "Mateusz Kliś | Portfolio",
   description:
     "Mateusz Kliś - CS student at University of Bielsko-Biała. Fullstack Next.js developer.",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     locale: "en-GB",
     images: [
       {
-        url: `https://klisiu.me/opengraph-image.png`,
+        url: `/opengraph-image.png`,
       },
     ],
     url: process.env.NEXT_PUBLIC_WEBSITE_URL,
