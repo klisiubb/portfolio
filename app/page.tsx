@@ -9,7 +9,7 @@ import { links } from "@/misc/links";
 
 export default function Page() {
   return (
-    <div className="absolute min-h-screen w-screen flex justify-center items-center flex-col">
+    <div className="absolute min-h-screen w-screen flex justify-center items-center flex-col overflow-hidden">
       <Navbar navItems={navItems} />
       <div className="absolute inset-0">
         <SparklesCore
