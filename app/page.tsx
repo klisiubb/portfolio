@@ -6,7 +6,8 @@ import TypingAnimation from "@/components/magicui/typing-animation";
 import Navbar from "@/components/navbar";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { links } from "@/misc/links";
-
+import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 export default function Page() {
   return (
     <div className="absolute min-h-screen w-screen flex justify-center items-center flex-col overflow-hidden">
@@ -20,6 +21,24 @@ export default function Page() {
           className="w-full h-full"
         />
       </div>
+      <Badge
+        variant="outline"
+        className="text-sm py-2 gap-x-2"
+        aria-label="New Edition date is revealed!"
+      >
+        <span className="relative flex h-4 w-4">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+          <span className="relative inline-flex h-4 w-4 rounded-full bg-primary"></span>
+        </span>
+        <span>Available for new projects</span>
+      </Badge>
+      <Image
+        src="/avatar.png"
+        alt="Coding Avatar"
+        width={1024}
+        height={1024}
+        className="z-30 w-64 h-64"
+      />
       <TypingAnimation
         className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-blue-800 inline-block text-transparent bg-clip-text"
         text="Hi, I am Mateusz Kliś."
