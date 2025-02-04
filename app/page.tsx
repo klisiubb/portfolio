@@ -27,10 +27,10 @@ export default function Page() {
         aria-label="New Edition date is revealed!"
       >
         <span className="relative flex h-4 w-4">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
-          <span className="relative inline-flex h-4 w-4 rounded-full bg-primary"></span>
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-700 opacity-75"></span>
+          <span className="relative inline-flex h-4 w-4 rounded-full bg-red-700"></span>
         </span>
-        <span>Available for new projects</span>
+        <span>Currently not looking for a job</span>
       </Badge>
       <Image
         src="/avatar.png"
